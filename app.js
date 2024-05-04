@@ -17,6 +17,8 @@ const { rizz, user } = require('./routes');
 
 const app = express();
 
+console.log('I will be there');
+
 app.enable('trust proxy');
 app.use('*', cors(options));
 
