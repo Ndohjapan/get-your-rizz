@@ -6,6 +6,9 @@ const userSchema = new mongoose.Schema(
     username: {
       type: String,
     },
+    email: {
+      type: String,
+    },
     __v: {
       type: Number,
       select: false,
@@ -21,7 +24,7 @@ const userSchema = new mongoose.Schema(
       createdAt: 'created_at',
       updatedAt: 'updated_at',
     },
-  },
+  }
 );
 
 userSchema.plugin(mongoose_paginate);

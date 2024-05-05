@@ -1,5 +1,5 @@
-const internalException = require("../../errors/internal-exception");
-const Rizz = require("../model/Rizz");
+const internalException = require('../../errors/internal-exception');
+const Rizz = require('../model/Rizz');
 
 class RizzRepository {
   async CreateRizz({ audio, image }) {
@@ -26,7 +26,7 @@ class RizzRepository {
         page,
         limit,
         select,
-        sort
+        sort,
       };
 
       const rizz = await Rizz.paginate(

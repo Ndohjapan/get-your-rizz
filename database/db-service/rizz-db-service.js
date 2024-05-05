@@ -114,6 +114,7 @@ class RizzDBService {
 
       return course;
     } catch (error) {
+      console.log(error);
       throw new badRequestException(error.message, error.status);
     }
   }

@@ -4,11 +4,11 @@ const { mongoose_paginate } = require('../../connection/db-conn');
 const rizzSchema = new mongoose.Schema(
   {
     image: {
-      type: String,
+      type: [String],
     },
     likes: {
       type: Number,
-      default: 0
+      default: 0,
     },
     audio: {
       type: String,
@@ -28,7 +28,7 @@ const rizzSchema = new mongoose.Schema(
       createdAt: 'created_at',
       updatedAt: 'updated_at',
     },
-  },
+  }
 );
 
 rizzSchema.plugin(mongoose_paginate);

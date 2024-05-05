@@ -46,4 +46,18 @@ router.get(
   })
 );
 
+router.post(
+  '/:rizz_id/like',
+  catchAsync(async (req, res) => {
+    const { rizz_id } = req.params;
+    const result = await service.LikeRizz(rizz_id);
+    res.send({
+      status: 'success',
+      message: 'Successful',
+      result: 1,
+      data: result,
+    });
+  })
+);
+
 module.exports = router;

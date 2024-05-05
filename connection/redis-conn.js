@@ -10,6 +10,7 @@ const redis_client = redis.createClient({url: process.env.REDIS_URL}, {
 });
 
 redis_client.on('connect', () => {
+  console.log('Connected to redis server');
   return;
 });
 

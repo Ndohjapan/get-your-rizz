@@ -17,10 +17,8 @@ const { rizz, user } = require('./routes');
 
 const app = express();
 
-console.log('I will be there');
-
 app.enable('trust proxy');
-app.use('*', cors(options));
+app.use('*', cors());
 
 app.use((req, res, next) => {
   const client_ip = requestIp.getClientIp(req);
@@ -61,7 +59,7 @@ const baseRoute = '/api/v1';
 app.use(baseRoute + '/rizz', rizz);
 app.use(baseRoute + '/user', user);
 
-app.get('/health', (req, res) => {
+app.get('/api/v1/health', (req, res) => {
   res.send('OK');
 });
 

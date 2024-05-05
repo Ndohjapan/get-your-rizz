@@ -1,4 +1,4 @@
-const badRequestException = require("../../../errors/bad-request-exception");
+const badRequestException = require("../../errors/bad-request-exception");
 const UserRepository = require("../repository/user-repository");
 const RedisRepository = require("../redis-repository");
 
