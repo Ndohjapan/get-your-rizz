@@ -48,12 +48,6 @@ app.use(preventParameterPollution());
 
 app.use(compression());
 
-app.use(function (req, res, next) {
-  res.on('finish', function () {
-    logRequest(req, res);
-  });
-  next();
-});
 
 const baseRoute = '/api/v1';
 app.use(baseRoute + '/rizz', rizz);
