@@ -4,7 +4,10 @@ const { mongoose_paginate } = require('../../connection/db-conn');
 const rizzSchema = new mongoose.Schema(
   {
     image: {
-      type: [String],
+      type: [{
+        number: Number,
+        link: String
+      }],
     },
     likes: {
       type: Number,
